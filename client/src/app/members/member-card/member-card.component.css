@@ -35,3 +35,7 @@
  .animate{
      transition: all 0.3s ease-in-out;
  }
+
+ .card-header a {
+    color:#002b36;
+  }

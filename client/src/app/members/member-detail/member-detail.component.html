@@ -1,9 +1,17 @@
 <div class="row" *ngIf="member">
     <div class="col-4">
-        <div class="card">
+        <div class="card border-primary mb-3" style="color:#002b36; background-color:#ffc107">
             <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}"
              class="card-img-thumnail">
              <div class="card-body">
+                <div>
+                    <strong>Name:</strong>
+                    <p>{{member.knownAs}}</p>
+                </div>
+                <div>
+                    <strong>Gender:</strong>
+                    <p>{{member.gender}}</p>
+                </div>
              <div>
                  <strong>Location:</strong>
                  <p>{{member.city}}, {{member.country}}</p>
@@ -12,40 +20,46 @@
                  <strong>Age:</strong>
                  <p>{{member.age}}</p>
              </div>
-             <div>
+             
+             <!-- <div>
                 <strong>Last Active:</strong>
                 <p>{{member.lastActive}}</p>
             </div>
              <div>
                  <strong>Member since:</strong>
                  <p>{{member.created}}</p>
+             </div> -->
              </div>
-             </div>
-            <div class="card-footer">
+            <!-- <div class="card-footer">
                 <div class="btn-group d-flex">
                     <button class="btn btn-primary">Like</button>
                     <button class="btn btn-secondary">Message</button>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="col-8">
         <tabset class="member-tabset">
             <tab heading='About {{member.knownAs}}'>
-                <h4>Description</h4>
+                <br>
+                <h4>Works for</h4>
                 <p>{{member.introduction}}</p>
-                <h4>Looking for </h4>
+                <br>
+                <h4>Department </h4>
                 <p>{{member.lookingFor}}</p>
             </tab>
 
-            <tab heading='Interests'>
+            <!-- <tab heading='Interests'>
                 <h4>Interests</h4>
                 <p> {{member.lookingFor}} </p>
-            </tab>
+            </tab> -->
 
             <tab heading='Photos'>
-                <ngx-gallery [options]="galleryOptions" [images]="galleryImages" 
+                <br>
+                <div class="text-center">
+                    <ngx-gallery [options]="galleryOptions" [images]="galleryImages" 
                     style="display: inline-block; margin-bottom: 20px;"></ngx-gallery>
+                </div>
             </tab>
 
             <tab heading='Messages'>
