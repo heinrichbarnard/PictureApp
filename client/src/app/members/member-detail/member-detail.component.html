@@ -1,6 +1,6 @@
 <div class="row" *ngIf="member">
     <div class="col-4">
-        <div class="card">
+        <div class="card border-primary mb-3" style="color:#002b36; background-color:#ffc107">
             <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}"
              class="card-img-thumnail">
              <div class="card-body">
@@ -41,8 +41,10 @@
     <div class="col-8">
         <tabset class="member-tabset">
             <tab heading='About {{member.knownAs}}'>
+                <br>
                 <h4>Works for</h4>
                 <p>{{member.introduction}}</p>
+                <br>
                 <h4>Department </h4>
                 <p>{{member.lookingFor}}</p>
             </tab>
@@ -53,6 +55,7 @@
             </tab> -->
 
             <tab heading='Photos'>
+                <br>
                 <div class="text-center">
                     <ngx-gallery [options]="galleryOptions" [images]="galleryImages" 
                     style="display: inline-block; margin-bottom: 20px;"></ngx-gallery>

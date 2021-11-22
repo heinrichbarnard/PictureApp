@@ -1,6 +1,7 @@
 <div class="row" *ngIf="member">
     <div class="col-4">
-        <h1>Your profile</h1>
+        <h1 style="color:primary">Edit Profile/Photos</h1>
+        <br>
     </div>
     <div class="col-8">
         <div class="alert alert-info" *ngIf="editForm.dirty">
@@ -8,7 +9,7 @@
         </div>
     </div>
     <div class="col-4">
-        <div class="card">
+        <div class="card border-primary mb-3" style="color:#002b36; background-color:#ffc107">
             <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}" 
                 class="card-img-top img-thumbnail">
             <div class="card-body">
@@ -29,8 +30,8 @@
                  <p>{{member.age}}</p>
              </div>
             </div>
-            <div class="card-footer">
-                <button [disabled]="!editForm.dirty" form="editForm" type="submit" class="btn btn-success btn-block">Save Changes</button>
+            <div class="card-footer  border-primary mb-3"  style="color:#002b36; background-color:#ffc107">
+                <button [disabled]="!editForm.dirty" form="editForm" type="submit" class="btn btn-block" style="background-color:#002b36; color:white">Save Changes</button>
             </div>
         </div>
     </div>
